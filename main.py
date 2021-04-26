@@ -23,7 +23,7 @@ driver.get(driver.current_url)  # need to update the current page document that 
 main = driver.find_element_by_id('content-body')
 result_list = main.find_elements_by_css_selector('p.lyric-meta-album-artist')
 for results in result_list:
-    print(results.text)
+    print("--------------" + "\n" + results.text)
 
 selection = input("Which artist would you like...")
 result_list2 = main.find_elements_by_xpath('//div[@class="sec-lyric clearfix"]')
