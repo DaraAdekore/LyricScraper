@@ -1,41 +1,15 @@
-import operator
+import json
 
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+import requests
+uid= "8824"
+token_id = "1coYz1QadIuDaIU2"
+base_url = f"https://www.stands4.com/services/v2/lyrics.php?uid={uid}&tokenid={token_id}&term=forever%20young&artist=Alphaville&format=json"
 
-# A python program to search up a song and give you options based on which artists have a song by the given name
-# upon choosing which song version you would like, the song lyrics are displayed
+respose = requests.get(base_url)
 
-PATH = "C:/Users/adeko/Downloads/chromedriver_win32/chromedriver"
-driver = webdriver.Chrome(PATH)
+json.dumps(respose.json())
 
-driver.get("https://www.lyrics.com/")
 
-main = driver.find_element_by_name("st")
-
-main.send_keys(input("What song would you like to search.."))
-
-main.send_keys(Keys.RETURN)
-
-driver.get(driver.current_url)  # need to update the current page document that we're working with.
-# main = driver.find_element_by_css_selector('Button.btn.btn-3.btn-xs.primary')  not being used at the moment.
-# ^ just used to learn how to use css selector
-main = driver.find_element_by_id('content-body')
-result_list = main.find_elements_by_css_selector('p.lyric-meta-album-artist')
-for results in result_list:
-    print("--------------" + "\n" + results.text)
-
-selection = input("Which artist would you like...")
-result_list2 = main.find_elements_by_xpath('//div[@class="sec-lyric clearfix"]')
-for results in result_list2:
-    if operator.contains(results.text, selection):
-        results.click()
-        break
-
-driver.get(driver.current_url)  # need to update the current page document that we're working with.
-main = driver.find_element_by_class_name("lyric.clearfix")
-lyrics = main.find_element_by_xpath('//pre[@id="lyric-body-text"]')
-title = driver.title + ".txt"
-f = open(title, "a")
-f.write(lyrics.text)
-f.close()
+"""f = open(f"demofile2.json", "a")
+f.write()
+f.close()"""
