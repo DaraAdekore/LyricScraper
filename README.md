@@ -1,6 +1,6 @@
 # LyricScraper
 Python program to scrape lyrics using the STANDS4 Web services API and Selenium Web automation Webdriver
-For your personal use, it is recommended that you follow the  Selenim Implementation for setting up the 
+For your personal use, it is recommended that you follow the  Selenium documentation for setting up the 
 WebDriver. Make sure to download the version of the webdriver that matches your current broweser version
 https://www.selenium.dev/documentation/en/webdriver/driver_requirements/<br />
 
