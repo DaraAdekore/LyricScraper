@@ -1,9 +1,9 @@
-import operator
 import json
+
 import requests
-from credentials import *
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+
+from credentials import *
 
 # A python program to search up a song and give you options based on which artists have a song by the given name
 # upon choosing which song version you would like, the song lyrics are displayed
