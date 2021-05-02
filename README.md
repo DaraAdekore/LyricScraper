@@ -14,3 +14,4 @@ My method is shown here:
 You may also have to configure your project and create a new virtual environment(venv) when you want to run this script. I used pyCharm to do it so it was easily done.
 
 Thanks for checking out my cool little script!
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/k8Nj4sVjClBwa6Ml5x" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/k8Nj4sVjClBwa6Ml5x">via GIPHY</a></p>
